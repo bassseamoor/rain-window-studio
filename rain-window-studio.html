@@ -1879,7 +1879,7 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
   var qs = new URLSearchParams(location.search);
   if (qs.get('render') !== '1') return;
 
-  var fps = Math.min(60, Math.max(1, parseInt(qs.get('fps'), 10) || 30));
+  var fps = Math.min(120, Math.max(1, parseInt(qs.get('fps'), 10) || 30));
   var seconds = Math.min(3600, Math.max(5, parseInt(qs.get('seconds'), 10) || 300));
   var _wu = parseInt(qs.get('warmup'), 10);
   var warmupFrames = (isNaN(_wu) || _wu < 0) ? 90 : Math.min(_wu, 600);
@@ -2001,7 +2001,8 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
          unsupported, so we skip the check and just configure. */
       encoder.configure({
         codec: 'avc1.640028', width: W, height: H,
-        bitrate: 12000000, framerate: fps
+        bitrate: Math.min(40000000, Math.round(12000000 * (W * H) / (1280 * 720))),
+        framerate: fps
       });
       RM.onFrame = encodeFrame;
       return true;
@@ -2045,6 +2046,7 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
     } catch (e) { fail('Couldn\u2019t finish the video: ' + e.message); return; }
     var buf = muxer.target.buffer;
     if (!buf || !buf.byteLength) { fail('The video came out empty.'); return; }
+    try { window.__renderResult = buf; } catch (e) {} /* lets automated tests grab the MP4 */
     var blob = new Blob([buf], { type: 'video/mp4' });
     var cleanSeed = seed.replace(/[^A-Za-z0-9]+/g, '').slice(0, 14) || 'seed';
     var name = studioLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') +
@@ -2131,5 +2133,6 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
 })();
 
 </script>
+
 
 </body></html>
