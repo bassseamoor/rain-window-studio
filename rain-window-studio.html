@@ -3,8 +3,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#111d22"><title>Window Weather 2 — Living Rain Studio</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23152128'/%3E%3Cpath d='M7 6h18v20H7zm9 0v20M7 15h18' stroke='%23c8e7e8' fill='none' stroke-width='2'/%3E%3C/svg%3E"><style>
 :root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--ink:#eaf1ef;--dim:#a1b6bb;--line:#bde4e525;--accent:#c1e2d7}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#111d22;color:var(--ink)}button,input,select{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer;color:inherit;background:#17272de8;border:1px solid var(--line);border-radius:9px;padding:10px 13px;min-height:39px;font-size:13px;transition:.18s}button:hover{background:#31454b;border-color:#badbdd66}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid #d2efe1;outline-offset:3px}button:disabled{opacity:.45;cursor:default}button.primary{background:var(--accent);border-color:var(--accent);color:#182d2e;font-weight:650}button.primary:hover{background:#def3e7}.icon{font-size:17px;padding:7px 11px}.glass{background:#0b1b22c9;border:1px solid var(--line);backdrop-filter:blur(18px);box-shadow:0 8px 40px #020c1355}#stage{position:fixed;inset:0;overflow:hidden}#scene{display:block;width:100%;height:100%;object-fit:contain;touch-action:none}header{position:absolute;top:20px;left:24px;right:24px;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:14px;pointer-events:none}.brand,.actions{pointer-events:auto;display:flex;align-items:center;gap:8px}.brand{border-radius:12px;padding:12px 16px;gap:14px}.wordmark{font-size:12px;font-weight:650;letter-spacing:.22em}.window-icon{display:grid;grid-template-columns:repeat(2,5px);gap:3px;border:1px solid #c8e3df;padding:3px;height:23px}.window-icon i{background:#b5d3d64d;width:5px;height:6px}.seed{font:11px ui-monospace,monospace;color:#95b8bc;padding-left:12px;border-left:1px solid var(--line)}.actions{padding:5px;border-radius:12px}.actions button{background:transparent;border:0}.actions .primary{background:var(--accent)}#place-card{position:absolute;left:45px;bottom:112px;pointer-events:none;text-shadow:0 3px 26px #061319b3;transition:opacity .2s}#place-card .eyebrow{font-size:11px;letter-spacing:.23em;color:#c4dedb;text-transform:uppercase}h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(30px,3vw,48px);letter-spacing:-.02em;margin:8px 0;color:#f3f2e8}#place-card p{font-size:13px;color:#c2d1d0;margin:0;line-height:1.7;max-width:440px}#dock{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);max-width:calc(100% - 44px);padding:7px;display:flex;gap:5px;align-items:center;border-radius:14px;z-index:5}#dock button{background:transparent;border:0;padding:9px 13px;white-space:nowrap}#dock button.active{background:#afd8cd25;color:#e7faf2}#dock .sep{width:1px;height:22px;background:var(--line);margin:0 5px}.stat{position:absolute;right:30px;bottom:31px;font-size:11px;color:#9db9b6;z-index:3;text-shadow:0 2px 10px #000}#panel{position:absolute;right:24px;top:87px;width:318px;max-height:calc(100% - 177px);border-radius:16px;display:flex;flex-direction:column;z-index:6;overflow:hidden}#panel[hidden]{display:none}.panel-head{padding:19px 20px 0}.panel-title{display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:550;margin-bottom:17px}.panel-title button{padding:0 6px;font-size:20px;min-height:25px;border:0;background:none;color:var(--dim)}.tabs{display:flex;gap:25px;border-bottom:1px solid var(--line)}.tabs button{padding:0 0 12px;border:0;border-radius:0;background:transparent;color:var(--dim);min-height:30px}.tabs button[aria-selected=true]{color:#e1f9ef;box-shadow:0 2px #b1dacb}.panel-content{padding:20px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#405760 transparent}.tab-panel[hidden]{display:none}.field{margin-bottom:19px}.row{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.row label{font-size:14px;color:#ccdcda}.value{color:#9cb8bd;font-size:12px;font-variant-numeric:tabular-nums}.field input[type=range]{width:100%;height:20px;margin:0;accent-color:#b9ddcf;cursor:pointer}.field select,.field input[type=number]{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;color:#e2eceb;background:#17292f;font-size:13px}.help{font-size:12px;color:#9eb4b7;line-height:1.7;margin:6px 0 17px}.section-label{font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:#8eaab0;margin:3px 0 16px}.check-row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:19px}.check-row input{width:17px;height:17px;accent-color:#c7e4d6}.two{display:grid;grid-template-columns:1fr 1fr;gap:9px}.wide{width:100%}.button-row{display:flex;gap:8px}.button-row>*{flex:1}.bottom-note{border-top:1px solid var(--line);margin-top:20px;padding-top:13px;font-size:11px;line-height:1.7;color:#88a3a8}.statusbox{border:1px solid var(--line);background:#18313a80;border-radius:10px;padding:12px;margin-bottom:15px;color:#b9cdcc;font-size:12px;line-height:1.6}.statusbox b{color:#f0f2ea;font-weight:500}#record-badge{position:absolute;top:92px;left:50%;transform:translateX(-50%);border-radius:30px;padding:9px 15px;font-size:12px;display:none;align-items:center;gap:10px;z-index:8;background:#18303eea;border:1px solid #dfb29255}#record-badge.active{display:flex}.red{height:7px;width:7px;background:#f39479;border-radius:50%}#record-badge button{min-height:24px;padding:2px 9px;border:0;background:none}#toast{position:absolute;left:50%;bottom:90px;transform:translate(-50%,10px);border:1px solid var(--line);background:#10272eef;color:#e0eeeb;border-radius:11px;padding:12px 18px;font-size:13px;line-height:1.5;max-width:min(470px,92vw);z-index:12;opacity:0;pointer-events:none;transition:.2s}#toast.show{opacity:1;transform:translate(-50%,0)}#restore{display:none;position:absolute;right:24px;top:20px;z-index:9;opacity:.35}#restore:hover{opacity:1}body.quiet header,body.quiet #place-card,body.quiet #dock,body.quiet #panel,body.quiet .stat{display:none}body.quiet #restore{display:block}#nogl{display:none;position:absolute;inset:0;place-items:center;background:#11212a;z-index:20;padding:30px;text-align:center}#nogl p{max-width:480px;font-size:15px;line-height:1.8;color:#bacbd0}.download-links{margin-top:13px;display:grid;gap:9px}.download-links a{font-size:12px;color:#c0e1d3;text-decoration:none;word-break:break-word}#wipe-hint{position:absolute;left:50%;top:94px;transform:translateX(-50%);font-size:11px;color:#adc5c480;pointer-events:none;transition:opacity .2s}body.quiet #wipe-hint{display:none}@media(max-width:850px){.stat{display:none}.seed{display:none}header{left:15px;right:15px;top:15px}.wordmark{font-size:10px;letter-spacing:.13em}.brand{padding:11px 12px;gap:9px}.actions button{font-size:12px;padding:9px 10px}#place-card{left:28px;bottom:107px}#dock button{font-size:12px;padding:9px 11px}#panel{right:15px;top:79px;max-height:calc(100% - 170px)}}@media(max-width:560px){header{left:10px;right:10px;top:10px;gap:8px}.brand{padding:10px 9px}.window-icon{display:none}.actions{gap:0;padding:3px}.actions button{font-size:11px;padding:8px}.actions .hide-mobile{display:none}#dock{bottom:17px;max-width:calc(100% - 20px);gap:1px;padding:5px}#dock button{font-size:11px;padding:9px 8px}#dock .sep{margin:0 2px}#place-card{left:25px;bottom:97px}#place-card p{font-size:12px;max-width:290px}#panel{left:10px;right:10px;top:70px;width:auto;max-height:calc(100% - 145px)}#wipe-hint{top:72px;white-space:nowrap;font-size:10px}.panel-content{padding:16px 18px}.field{margin-bottom:15px}body:has(#panel:not([hidden])) #place-card{opacity:0}#restore{right:12px;top:12px}h1{font-size:33px}.brand .wordmark{font-size:9px;letter-spacing:.1em}}
-</style><link rel="stylesheet" href="studio-shell.css?v=3">
-<script defer src="studio-shell.js?v=3"></script>
+</style><link rel="stylesheet" href="studio-shell.css?v=2">
+<script defer src="studio-shell.js?v=2"></script>
 </head><body><main id="stage"><canvas id="scene" aria-label="A procedurally generated rainy street viewed through a wet window"></canvas><header><div class="brand glass"><span class="window-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="wordmark">WINDOW WEATHER</span><span class="seed" id="seed-label"></span></div><div class="actions glass"><button id="sound" aria-pressed="false" title="Toggle rain ambience">Sound off</button><button id="clean" class="hide-mobile" title="Hide controls (H)">Hide UI</button><button id="studio" aria-expanded="false">Studio</button><button id="generate" class="primary" title="Generate a new outside world (G)">New view ↗</button></div></header><div id="wipe-hint">Drag a fingertip across the glass to clear the droplets</div><div id="place-card"><div class="eyebrow" id="district-label">Somewhere in the rain</div><h1 id="place-name">The street outside</h1><p id="place-description">A quiet room. A world going on without you.</p></div><div id="dock" class="glass"><button data-light="0">Overcast</button><button data-light="1" class="active">Blue hour</button><button data-light="2">After dark</button><span class="sep"></span><button id="pause" title="Pause (Space)">Pause</button><button id="capture" title="Video studio">Record</button><button id="full" title="Full screen (F)">⛶</button></div><div class="stat" id="stats">Preparing the rain…</div><aside id="panel" class="glass" aria-label="Rain studio controls" hidden><div class="panel-head"><div class="panel-title">Your living window<button id="close-panel" aria-label="Close studio">×</button></div><div class="tabs" role="tablist"><button id="tab-scene" role="tab" aria-controls="panel-scene" aria-selected="true">Outside</button><button id="tab-glass" role="tab" aria-controls="panel-glass" aria-selected="false" tabindex="-1">Glass</button><button id="tab-export" role="tab" aria-controls="panel-export" aria-selected="false" tabindex="-1">Export</button></div></div><div class="panel-content"><section id="panel-scene" class="tab-panel" role="tabpanel" aria-labelledby="tab-scene"><div class="section-label">Every seed, another world</div><div class="field"><div class="row"><label for="district">Neighborhood</label></div><select id="district" data-state="district"><option value="auto">Surprise me</option><option value="oldtown">Old town cafés</option><option value="lantern">Lantern lane</option><option value="metro">Midnight avenue</option><option value="park">Across the park</option><option value="harbor">Harbor quarter</option></select></div><div id="outside-fields"></div><div class="section-label">Eight hours of city life</div><p class="statusbox" id="story-clock"></p><div class="field"><label for="event-preview">Preview an event</label><select id="event-preview"><option value="">Jump to a moment…</option></select></div><p class="help">32 seeded moments over eight hours, with quiet stretches between them. Preview jumps are disabled during recording. Playback and recording run in real time; the story repeats after eight hours.</p><div class="button-row"><button id="save-recipe">Save scene</button><button id="load-recipe">Load scene</button></div><input id="recipe-file" type="file" accept=".json,application/json" hidden><p class="bottom-note">Every generation rebuilds the avenue, distant blocks, landmark, shopfronts, trees and street life. Look closer for puddles, balconies, bay windows, street lamps, wind-driven trees and scattered leaves. Tune puddle coverage and curb patina outside, or saturation, contrast and dramatic lighting under Glass. Street depth sets the length of the side avenue. Weather evolves slowly; no flashes or lightning.</p></section><section id="panel-glass" class="tab-panel" role="tabpanel" aria-labelledby="tab-glass" hidden><div class="section-label">The rain, up close</div><div class="field"><div class="row"><label for="frame">Window frame</label></div><select id="frame" data-state="frame"><option value="0">Picture window</option><option value="1">Café window</option><option value="2">Loft panes</option></select></div><div id="glass-fields"></div><button id="wipe" class="wide">Wipe the window clear</button><p class="help" style="margin-top:12px">Drops collect, merge and run down the glass. Drag to wipe them away. Room foreground adds a modeled plant and ceramic coffee mug; viewpoint drift moves only the view outside.</p><div class="check-row"><label for="sound-check">Rain ambience</label><input id="sound-check" type="checkbox"></div><div class="field"><div class="row"><label for="volume">Ambience volume</label><output id="v-volume" class="value">35%</output></div><input id="volume" type="range" min="0" max="1" step=".01" value=".35"></div></section><section id="panel-export" class="tab-panel" role="tabpanel" aria-labelledby="tab-export" hidden><div class="section-label">A little weather to keep</div><div class="field"><div class="row"><label for="resolution">Resolution</label></div><select id="resolution"><option value="720">720p</option><option value="1080" selected>1080p · Full HD</option><option value="1440">1440p · QHD</option><option value="2160">2160p · 4K</option></select></div><div class="two"><div class="field"><div class="row"><label for="aspect">Frame</label></div><select id="aspect"><option value="1.7777777778">16:9</option><option value="0.5625">9:16</option><option value="1">1:1</option><option value="2.3333333333">21:9</option></select></div><div class="field"><div class="row"><label for="fps">Frame rate</label></div><select id="fps"><option value="24">24 fps</option><option value="30" selected>30 fps</option><option value="60">60 fps</option></select></div></div><div class="field"><div class="row"><label for="duration">Length in seconds</label></div><input id="duration" type="number" min="0" max="86400" step="1" value="60"><p class="help">0 = until stopped. Recording runs in real time.</p><button id="eight-hours" class="wide">Set length to eight hours</button></div><div class="check-row"><label for="include-audio">Include rain sound</label><input id="include-audio" type="checkbox" checked></div><div class="statusbox" id="record-summary"></div><button class="primary wide" id="record">● Start recording</button><button class="wide" id="snapshot" style="margin-top:8px">Save a crisp still · PNG</button><div id="downloads" class="download-links"></div><p class="help" style="margin-top:12px">Only the window view is captured. No controls or watermark. Keep this tab visible while recording.</p><div class="section-label" style="margin-top:23px">Preview detail</div><div class="field"><div class="row"><label for="quality">Quality</label></div><select id="quality" data-state="quality"><option value="0">Eco · lighter preview</option><option value="1">Native · crisp</option><option value="2">High · fine reflections</option></select></div><p class="help">Full display resolution by default. Reflections render separately; Eco uses fewer rain streaks and lighter reflections. Video dimensions follow your export settings.</p><p class="bottom-note">Living scene v3.7 · G new view · H hide controls · F fullscreen · Space pause · S still. Scenes save automatically on this device.</p></section></div></aside><div id="record-badge"><i class="red"></i><span id="record-time">Recording 00:00</span><button id="stop-record">Stop</button></div><button class="glass" id="restore">Show studio</button><div id="toast" role="status"></div><div id="nogl"><div><h1>Let the weather in.</h1><p id="error-text">This studio needs WebGL 2. Open it in Chrome or Edge with hardware acceleration enabled.</p></div></div></main>
 <script>
 "use strict";
@@ -2009,12 +2009,8 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
   /* ---- encoder ---- */
   var encoder = null, muxer = null, encodedFrames = 0, t0 = 0;
   /* Counters that prove the iOS path actually produced media. A finished
-     render with zero muxed chunks is a 581-byte empty shell, not a video.
-     rawChunks counts encoder output directly, before the muxer can drop
-     anything; muxedChunks counts chunks actually written to the file.
-     If the two diverge, the loss is downstream of the encoder. */
-  var framesAttempted = 0, encodeErrors = 0, rawChunks = 0, muxedChunks = 0;
-  var muxErrors = 0, firstMuxError = '';
+     render with zero muxed chunks is a 581-byte empty shell, not a video. */
+  var framesAttempted = 0, encodeErrors = 0, muxedChunks = 0;
 
   /* If the device encoder rejects frames, say so fast and plainly instead of
      spending the whole render on output that can only come out empty. */
@@ -2044,29 +2040,14 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
     } catch (e) { frame2d = null; fctx = null; return false; }
   }
 
-  /* Shared "empty video" message: frames drained through the encoder,
-     nothing (or nothing usable) landed in the file. Names the raw
-     encoder count vs the muxed count so the next report is self-
-     diagnosing: equal-and-zero means a silent encoder, divergent means
-     chunks were lost downstream. */
+  /* Shared "empty video" message: 60+ frames drained through the encoder,
+     zero chunks came out. Used both mid-render (fail fast) and at finish. */
   function failEmpty() {
-    var detail = framesAttempted + ' frames went in, the encoder produced ' + rawChunks +
-      ' chunks, but the file kept ' + muxedChunks + ' of them.';
-    if (muxErrors) detail += ' File errors: ' + muxErrors + (firstMuxError ? ' (first: ' + firstMuxError + ').' : '.');
-    if (encodeErrors) detail += ' The encoder rejected ' + encodeErrors + ' frames.';
-    fail('The video came out empty \u2014 ' + detail + ' Please try again; if it keeps happening, use a lower resolution.');
+    fail('The video came out empty \u2014 ' + framesAttempted + ' frames went in, but this device\u2019s encoder recorded 0 of them' +
+      (encodeErrors ? ' (' + encodeErrors + ' were rejected).' : '.') +
+      ' Please try again; if it keeps happening, use a lower resolution.');
   }
-
-  /* ---- iOS decoderConfig recovery ----
-     iOS Safari's WebCodecs encoder can emit chunks whose metadata has no
-     decoderConfig. Without it the muxer cannot write the avcC box, and its
-     finalize() then crashes reading decoderConfig.colorSpace of null.
-     Recover the config from key chunks' SPS/PPS NAL units (H.264 carries
-     them inline), retrying on EVERY keyframe — real hardware encoders
-     don't all package NALs like the software encoder this was first
-     tested against, so both Annex-B and length-prefixed layouts are
-     tried before giving up on a keyframe. */
-  var _avcDc = null, avcKeyTries = 0;
+  var _avcDc = null;
   function withAvcDecoderConfig(chunk, meta) {
     meta = meta || {};
     if (meta.decoderConfig) { _avcDc = meta.decoderConfig; return meta; }
@@ -2074,7 +2055,6 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
     var dc = null;
     try {
       if (chunk && chunk.type === 'key' && chunk.byteLength > 0) {
-        avcKeyTries++;
         var buf = new Uint8Array(chunk.byteLength);
         chunk.copyTo(buf);
         dc = avcDcFromNalUnits(buf);
@@ -2083,11 +2063,10 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
     if (dc) { _avcDc = dc; return { decoderConfig: dc }; }
     return meta;
   }
-  /* Split one H.264 sample into NAL units, tolerating both Annex-B
-     (start codes) and length-prefixed (avcC) layouts. Unknown NAL types
-     (AUD, SEI, …) are skipped over, not choked on. */
-  function splitNals(buf, annexB) {
-    var nals = [], i, j, m, p, len, sc, scLen, end;
+  function avcDcFromNalUnits(buf) {
+    var nals = [], i, j, k, m, p, len, sc, scLen, end, t;
+    var annexB = buf.length > 4 && buf[0] === 0 && buf[1] === 0 &&
+      (buf[2] === 1 || (buf[2] === 0 && buf[3] === 1));
     if (annexB) {
       i = 0;
       while (i + 3 < buf.length) {
@@ -2114,26 +2093,14 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
         p += 4 + len;
       }
     }
-    return nals;
-  }
-  function spsPpsFromNals(nals) {
-    var sps = null, pps = null, k, t;
+    var sps = null, pps = null;
     for (k = 0; k < nals.length; k++) {
       t = nals[k][0] & 31;
       if (t === 7 && !sps) sps = nals[k];
       else if (t === 8 && !pps) pps = nals[k];
       if (sps && pps) break;
     }
-    return (sps && pps && sps.length >= 4) ? { sps: sps, pps: pps } : null;
-  }
-  function avcDcFromNalUnits(buf) {
-    if (!buf || buf.length < 5) return null;
-    var annexB = buf[0] === 0 && buf[1] === 0 &&
-      (buf[2] === 1 || (buf[2] === 0 && buf[3] === 1));
-    var found = spsPpsFromNals(splitNals(buf, annexB));
-    if (!found) found = spsPpsFromNals(splitNals(buf, !annexB));
-    if (!found) return null;
-    var sps = found.sps, pps = found.pps;
+    if (!sps || !pps || sps.length < 4) return null;
     var avcC = new Uint8Array(11 + sps.length + pps.length);
     avcC[0] = 1; avcC[1] = sps[1]; avcC[2] = sps[2]; avcC[3] = sps[3];
     avcC[4] = 0xFF; avcC[5] = 0xE1;
@@ -2176,41 +2143,8 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
       });
       encoder = new VideoEncoder({
         output: function (chunk, meta) {
-          /* Counted before anything can drop it: this is what the
-             encoder actually produced, independent of the muxer. */
-          rawChunks++;
-          try {
-            /* Never trust the chunk's own timing fields. iOS Safari's
-               hardware encoder emits duration null, and mp4-muxer throws
-               on a non-finite duration — which used to silently discard
-               EVERY chunk (the "frames in, 0 recorded" empty file).
-               Copy the bytes once and pass an explicit timestamp plus
-               the nominal frame duration instead. */
-            var ts = (chunk.timestamp != null && isFinite(chunk.timestamp) && chunk.timestamp >= 0)
-              ? chunk.timestamp : Math.round(rawChunks * 1e6 / fps);
-            var dur = (chunk.duration != null && isFinite(chunk.duration) && chunk.duration > 0)
-              ? chunk.duration : Math.round(1e6 / fps);
-            var bytes = new Uint8Array(chunk.byteLength);
-            chunk.copyTo(bytes);
-            muxer.addVideoChunkRaw(bytes, chunk.type, ts, dur, withAvcDecoderConfig(chunk, meta));
-            muxedChunks++;
-          } catch (e) {
-            /* Recorded, never silently swallowed: a divergence between
-               rawChunks and muxedChunks is itself the diagnosis. */
-            muxErrors++;
-            if (!firstMuxError) firstMuxError = (e && e.message) || String(e);
-          }
+          try { muxer.addVideoChunk(chunk, withAvcDecoderConfig(chunk, meta)); muxedChunks++; } catch (e) {}
           if (RM._bp && encoder.encodeQueueSize < 20) RM._bp = false;
-          /* Fail fast if the video format info never arrives: two
-             keyframes attempted without readable SPS/PPS means the file
-             could never be playable — stop loudly instead of rendering
-             a broken file to the end. */
-          if (RM.phase === 'record' && !_avcDc && avcKeyTries >= 2) {
-            fail('The video\u2019s format info never arrived \u2014 the encoder produced ' + rawChunks +
-              ' chunks but their layout couldn\u2019t be read' +
-              (muxErrors ? ' (' + muxErrors + ' file errors' + (firstMuxError ? ', first: ' + firstMuxError : '') + ')' : '') +
-              '. Please try again; if it keeps happening, use a lower resolution.');
-          }
         },
         error: function (e) { fail('Encoder error: ' + (e && e.message)); }
       });
@@ -2264,7 +2198,7 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
     var remain = rate > 0.01 ? (totalFrames - encodedFrames) / rate : 0;
     setStatus('Frame ' + encodedFrames.toLocaleString() + ' / ' + totalFrames.toLocaleString() + ' (' + pct.toFixed(0) + '%)');
     var eta = document.getElementById('rmEta');
-    if (eta) eta.textContent = '\u2248 ' + fmtTime(remain) + ' left \u00B7 ' + rate.toFixed(1) + ' fps wall \u00B7 ' + rawChunks + ' enc \u00B7 ' + muxedChunks + ' mux \u00B7 q' + encoder.encodeQueueSize;
+    if (eta) eta.textContent = '\u2248 ' + fmtTime(remain) + ' left \u00B7 ' + rate.toFixed(1) + ' fps wall \u00B7 ' + muxedChunks + ' chunks \u00B7 q' + encoder.encodeQueueSize;
   }
 
   async function finishRender() {
@@ -2278,13 +2212,6 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
     var buf = muxer.target.buffer;
     if (!buf || !buf.byteLength) { fail('The video came out empty.'); return; }
     if (muxedChunks === 0) { failEmpty(); return; }
-    /* Chunks without format info would make an unplayable file: never
-       hand the user a broken "ready" video. Fail loudly instead. */
-    if (!_avcDc) {
-      fail('The video recorded ' + muxedChunks + ' chunks but their format info never arrived, so no playable file could be made. ' +
-        'Please try again; if it keeps happening, use a lower resolution.');
-      return;
-    }
     try { window.__renderResult = buf; } catch (e) {} /* lets automated tests grab the MP4 */
     var blob = new Blob([buf], { type: 'video/mp4' });
     var cleanSeed = seed.replace(/[^A-Za-z0-9]+/g, '').slice(0, 14) || 'seed';
@@ -2303,7 +2230,12 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
       '<div style="font-size:13px;color:#8b95ab;margin-bottom:20px;font-family:ui-monospace,monospace">' + esc(name) + ' \u00B7 ' + mb + ' MB</div>' +
       '<button id="rmShare" style="font-size:17px;font-weight:800;border:0;border-radius:14px;padding:16px 30px;background:#2f7bff;color:#fff;margin-bottom:12px">Share video</button>' +
       '<div style="font-size:12px;color:#8b95ab;max-width:300px;line-height:1.6">Share \u2192 Save to Files \u2192 your SSD.<br>Or use the download link below.</div>' +
-      '<a id="rmDl" href="' + url + '" download="' + esc(name) + '" style="margin-top:14px;color:#9cc3ff;font-size:14px">Download instead</a>';
+      '<a id="rmDl" href="' + url + '" download="' + esc(name) + '" style="margin-top:14px;color:#9cc3ff;font-size:14px">Download instead</a>' +
+      '<div><button id="rmBackDone" ' +
+      'style="margin-top:22px;font-size:16px;font-weight:700;border:0;border-radius:12px;padding:14px 24px;background:#1a2236;color:#fff">Back to queue</button></div>';
+    document.getElementById('rmBackDone').onclick = function () {
+      location.href = 'https://bassseamoor.github.io/render-queue/';
+    };
     document.getElementById('rmShare').onclick = function () {
       var file = new File([blob], name, { type: 'video/mp4' });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
@@ -2352,8 +2284,8 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
       '<div style="font-size:13px;color:#8b95ab;margin-bottom:18px">No video was saved.</div>' +
       '<button id="rmBack" ' +
       'style="font-size:16px;font-weight:700;border:0;border-radius:12px;padding:14px 24px;background:#1a2236;color:#fff">Back to queue</button>';
-    /* Was: inline onclick with \u2018\u2019 curly quotes around the URL —
-       a JS syntax error, so tapping the button silently did nothing. */
+    /* Was: inline onclick with curly quotes around the URL — a JS syntax
+       error, so tapping the button silently did nothing. */
     document.getElementById('rmBack').onclick = function () {
       location.href = 'https://bassseamoor.github.io/render-queue/';
     };
@@ -2375,7 +2307,6 @@ b.setAttribute("aria-label",h?"Show interface":"Hide interface");});})();
   } catch (e) {}
   setStatus('Preparing\u2026 (warming up)');
 })();
-
 
 </script>
 
